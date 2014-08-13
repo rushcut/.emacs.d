@@ -10,6 +10,7 @@
 (require 'init-git)
 (require 'init-ido)
 (require 'init-editing)
+(require 'init-popwin)
 (require 'init-guide-key)
 
 (require 'init-site-lisp)
