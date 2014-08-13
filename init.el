@@ -6,6 +6,7 @@
 (require-package 'diminish)
 
 (require 'init-preference)
+(require 'init-look)
 (require 'init-git)
 (require 'init-ido)
 (require 'init-editing)
