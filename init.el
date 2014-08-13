@@ -18,5 +18,7 @@
 (require 'init-company)
 (require 'init-yasnippet)
 (require 'init-windows)
+(require 'init-files)
+;; (require 'init-term)
 
 (require 'init-special-buffers)

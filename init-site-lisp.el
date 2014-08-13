@@ -9,6 +9,7 @@
 
 
 (require 'my-mode)
+(require 'my-functions)
 (require 'alternative-files)
 
 (provide 'init-site-lisp)
