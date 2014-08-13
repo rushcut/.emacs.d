@@ -7,3 +7,4 @@
 
 (require 'init-preference)
 (require 'init-git)
+(require 'init-ido)
