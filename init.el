@@ -10,3 +10,8 @@
 (require 'init-git)
 (require 'init-ido)
 (require 'init-editing)
+
+(require 'init-site-lisp)
+
+(require 'init-projectile)
+(require 'init-alternative-files)

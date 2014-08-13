@@ -1,3 +1,5 @@
+(add-to-list 'load-path user-emacs-directory)
+
 (defconst *is-a-mac* (eq system-type 'darwin))(defconst *spell-check-support-enabled* nil)
 (defconst *is-a-mac* (eq system-type 'darwin))
 (defconst *is-cocoa-emacs* (and *is-a-mac* (eq window-system 'ns)))
@@ -8,13 +10,6 @@
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-
-;; Set path to dependencies
-(setq site-lisp-dir (expand-file-name "site-lisp" user-emacs-directory))
-
-;; Set up load path
-(add-to-list 'load-path user-emacs-directory)
-(add-to-list 'load-path site-lisp-dir)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -48,11 +43,6 @@
  visible-bell t
  display-buffer-reuse-frames t
  )
-;; Add external projects to load path
-(dolist (project (directory-files site-lisp-dir t "\\w+"))
-  (when (file-directory-p project)
-    (add-to-list 'load-path project)))
-
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
 

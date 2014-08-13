@@ -5,3 +5,5 @@
 /.backups
 /.ido.last
 /.bookmarks.el
+/projectile.cache
+/projectile-bookmarks.eld
