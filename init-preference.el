@@ -56,7 +56,16 @@
 ;; Auto Revert
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(global-auto-revert-mode t)
+(defun revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive) (flet ((yes-or-no-p (prompt) t)) (revert-buffer)))
+
+;; Auto refresh buffers
+(global-auto-revert-mode +1)
+
+;; Also auto refresh dired, but be quiet about it
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
