@@ -17,3 +17,6 @@
 (require 'init-alternative-files)
 (require 'init-company)
 (require 'init-yasnippet)
+(require 'init-windows)
+
+(require 'init-special-buffers)

@@ -1,4 +1,5 @@
 (require-package 'projectile)
+(require-package 'ag)
 (custom-set-variables
  '(projectile-enable-caching t)
  '(projectile-keymap-prefix (kbd "M-s p")))
