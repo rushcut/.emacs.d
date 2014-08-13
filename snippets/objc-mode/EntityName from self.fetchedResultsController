@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: EntityName from self.FetchedResultsController
+# key: entity
+# --
+NSString* entityName = [[self.fetchedResultsController fetchRequest] entityName];

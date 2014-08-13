@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name: Script Filter (Alfred)
+# key: input
+# --
+<dict>
+  <key>config</key>
+  <dict>
+    <key>argumenttype</key>
+    <integer>0</integer>
+    <key>escaping</key>
+    <integer>0</integer>
+    <key>keyword</key>
+    <string>${1:keyword}</string>
+    <key>title</key>
+    <string>${2:title}</string>
+    <key>subtext</key>
+    <string>${3:subtext}</string>
+    <key>runningsubtext</key>
+    <string>${4:running text}</string>
+    <key>script</key>
+    <string>${5:script}</string>
+    <key>type</key>
+    <integer>0</integer>
+    <key>withspace</key>
+    <true/>
+  </dict>
+  <key>type</key>
+  <string>alfred.workflow.input.scriptfilter</string>
+  <key>uid</key>
+  <string>`(insert-random-uuid)`</string>
+  <key>version</key>
+  <integer>0</integer>
+</dict>

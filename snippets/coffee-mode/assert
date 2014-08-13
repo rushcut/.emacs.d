@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: assert
+# key: asne
+# --
+expect($1).not.toBeNull($2)

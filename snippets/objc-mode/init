@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: alloc init
+# key: in
+# --
+[[${1:NSObject} alloc] init$0];

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: textlabel
+# key: cell
+# --
+cell.textLabel.text = $0

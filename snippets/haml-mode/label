@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: label
+# key: cl
+# --
+`(delete-char (- (skip-chars-backward " ")))`.label.label-${1:info}$0

@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: gem
+# key: test (rails min)
+# --
+group :development, :test do
+  gem 'thin'
+  gem 'quiet_assets'
+  gem 'ffaker'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'cucumber'
+  gem 'cucumber-rails', require: false
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+end

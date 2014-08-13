@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: addSubView:
+# key: view
+# --
+[${1:self}.view addSubview:${2:subView}];

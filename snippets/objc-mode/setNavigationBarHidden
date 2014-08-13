@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: setNavigationBarHidden
+# key: na
+# --
+[self.navigationController setNavigationBarHidden:${1:YES} animated:${2:NO}];

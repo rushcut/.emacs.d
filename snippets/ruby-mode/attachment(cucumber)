@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: attachment(cucumber)
+# key: attachment
+# --
+attach_file("${1:image[attachment]}", ${2:path})

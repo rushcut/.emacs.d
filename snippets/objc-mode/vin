@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: assign with alloc init
+# key: vin
+# --
+${1:NSObject}* ${1:$(s-lower-camel-case (replace-regexp-in-string "^[A-Z][A-Z]" "" yas-text))} = [[$1 alloc] init$0];

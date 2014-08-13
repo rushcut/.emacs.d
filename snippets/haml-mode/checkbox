@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: checkbox
+# key: checkbox
+# --
+.form-group
+  - @games.each do |game|
+    %label
+      = check_box_tag "quest[game_ids][]", game.id
+      = game.name

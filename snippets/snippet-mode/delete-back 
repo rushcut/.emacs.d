@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: delete-back
+# key: del
+# --
+`(delete-char (- (skip-chars-backward " ")))`$0

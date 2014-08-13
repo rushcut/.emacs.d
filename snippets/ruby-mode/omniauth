@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: omniauth
+# key: omniauth
+# binding: direct-keybinding
+# --
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
+end

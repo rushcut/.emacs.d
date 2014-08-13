@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: url_options
+# key: url_options
+# --
+def url_options
+  {$1: $2}.merge(super)
+end

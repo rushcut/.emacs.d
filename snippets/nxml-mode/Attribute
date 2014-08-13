@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Attribute
+# key: attr
+# --
+<key>$1</key>
+<$2>$3</$2>

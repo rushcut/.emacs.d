@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: Open URL (Alfred)
+# key: output
+# --
+<dict>
+  <key>config</key>
+  <dict>
+    <key>plusspaces</key>
+    <false/>
+    <key>url</key>
+    <string>${1:url}</string>
+    <key>utf8</key>
+    <false/>
+  </dict>
+  <key>type</key>
+  <string>alfred.workflow.action.openurl</string>
+  <key>uid</key>
+  <string>`(insert-random-uuid)`</string>
+  <key>version</key>
+  <integer>0</integer>
+</dict>

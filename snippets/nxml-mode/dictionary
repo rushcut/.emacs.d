@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: dictionary
+# key: dict
+# --
+<dict>
+$0
+</dict>

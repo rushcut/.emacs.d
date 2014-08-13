@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: submit(bootstrap 3)
+# key: su
+# --
+.form-group.button-group
+  = f.submit "${1:저장}", class: "btn btn-default"

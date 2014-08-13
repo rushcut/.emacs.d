@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: @synthesize fetchedResultsController;
+# key: sy
+# --
+@synthesize fetchedResultsController;

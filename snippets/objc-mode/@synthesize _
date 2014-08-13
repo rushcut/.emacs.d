@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: @synthesize _
+# key: syn
+# --
+@synthesize $1 = _$1;

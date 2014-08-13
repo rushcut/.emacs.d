@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: save
+# key: save
+# --
+NSError* error = nil;
+if (![context save:&error]) {
+  NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+  abort();
+}

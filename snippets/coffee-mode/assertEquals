@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: assertEquals
+# key: ase
+# --
+expect($1).toEqual($2)

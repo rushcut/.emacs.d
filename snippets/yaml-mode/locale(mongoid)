@@ -1,0 +1,30 @@
+# -*- mode: snippet -*-
+# name: locale(mongoid)
+# key: locale
+# --
+errors:
+  # default format: "%{attribute} %{message}"
+  format: "%{message}"
+
+mongoid:
+  attributes:
+    article:
+      title: "Article title"
+
+  errors:
+    models:
+      article:
+        attributes:
+          title:
+            blank: "Article title can't be blank."
+          document_id:
+            blank: "You must associate the article with a parent document."
+          description_1:
+            blank: "First description text area can't be blank."
+          code_1:
+            blank: "First code text area can't be blank."
+
+      document:
+        attributes:
+          title:
+            blank: "Document title can't be blank."

@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: instance Label
+# key: ila
+# --
+// $1
+${1:_label} = [[UILabel alloc] init];
+[$1 setFont:[UIFont fontWithName:@"Copperplate-Bold" size:${2:13}]];
+[$1 setTextAlignment:NSTextAlignment${3:Center}];
+[$1 setTextColor:[UIColor ${4:white}Color]];
+[$1 setNumberOfLines:1];
+${5:[$1.layer setBorderColor:[UIColor ${6:white}Color].CGColor];
+[$1.layer setBorderWidth:1.5];
+}[self addSubview:$1];

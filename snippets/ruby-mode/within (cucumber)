@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: within (cucumber)
+# key: with
+# --
+within("${1:selector}") do
+                        $0
+end

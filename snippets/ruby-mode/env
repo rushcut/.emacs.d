@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: env
+# key: env(rushcut)
+# --
+include FactoryGirl::Syntax::Methods
+
+def actor_matcher
+  /"?(내|[^"]+)"?/
+end

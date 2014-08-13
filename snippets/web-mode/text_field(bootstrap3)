@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: text_field(bootstrap3)
+# key: fi
+# --
+<div class="form-group">
+  <%= f.label :${1:attr} %>
+  <%= f.${2:text_field} :$1, class: "form-control", placeholder: "${3:palceholder}" %>
+</div>

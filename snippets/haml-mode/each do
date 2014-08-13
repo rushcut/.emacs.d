@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: each do
+# key: each
+# binding: direct-keybinding
+# --
+- ${1:elements}.each do |${1:$(ruby-singularize-last-string yas-text)}|
+  $0

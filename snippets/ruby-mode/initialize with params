@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: initialize with params
+# key: init
+# --
+
+attr_reader ${1:$(mapconcat 'identity (mapcar (lambda (e) (concat ":" (chomp e) " ")) (split-string yas-text ",")) ",")}
+
+def initialize ${1:name, value}
+${1:$(mapconcat 'identity (mapcar (lambda (e) (concat "@" (chomp e) " = " (chomp e))) (split-string yas-text ",")) "\n")}
+end

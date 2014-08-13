@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: appDelegate
+# key: app
+# --
+AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];

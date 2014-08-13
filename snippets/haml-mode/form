@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: form
+# key: form
+# --
+= form_for ${1:object} do |f|
+
+  $0
+
+  .form-group.button-group
+    = f.submit ${2:"저장"}, class: "btn btn-default"

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: arrayWithObjects
+# key: ar
+# --
+[NSArray arrayWithObjects:$1, nil];

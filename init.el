@@ -16,3 +16,4 @@
 (require 'init-projectile)
 (require 'init-alternative-files)
 (require 'init-company)
+(require 'init-yasnippet)

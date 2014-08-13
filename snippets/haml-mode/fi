@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: field(bootstrap 3)
+# key: fi
+# --
+.form-group
+  = f.label :${1:name}
+  = f.${2:text}_field :$1, class: "form-control"

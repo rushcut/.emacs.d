@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: each
+# key: ea
+# --
+each (index, ${1:element}) ->
+     $0

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: alert
+# key: alert
+# --
+UIAlertView* alert = [[UIAlertView alloc]
+                       initWithTitle:NSLocalizedString(@"Error saving entity", @"Error saving entity")
+                             message:[NSString stringWithFormat:NSLocalizedString(@"Error waw: %@, quitting.", @"Error was: %@ quitting"), [error description]]
+                            delegate:self cancelButtonTitle:NSLocalizedString(@"Aw, Nuts", @"Aw, Nuts") otherButtonTitles: nil];
+[alert show];

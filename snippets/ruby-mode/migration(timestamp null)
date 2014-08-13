@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: migration(timestamp null)
+# key: migration
+# binding: direct-keybinding
+# expand-env: ((some-var some-value))
+# type: command
+# --
+def up
+  change_column(:games_quests, :created_at, :datetime, :null => true)
+  change_column(:games_quests, :updated_at, :datetime, :null => true)
+end
+
+def down
+  change_column(:games_quests, :created_at, :datetime, :null => false)
+  change_column(:games_quests, :updated_at, :datetime, :null => false)
+end

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: click_link(id)
+# key: click
+# --
+click_link "$1"

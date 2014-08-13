@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: fixture (jasime-fixture)
+# key: af
+# --
+affix '$1'

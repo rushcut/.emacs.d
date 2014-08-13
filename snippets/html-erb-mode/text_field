@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: text_field
+# key: fi
+# --
+<div class="form-group">
+  <%= f.label :${1:title} %>
+  <%= f.text_field :$1, class: "form-control" %>
+</div>

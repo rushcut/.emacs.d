@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: chef user
+# key: chef
+# --
+user ${1:username} do
+  comment "#{$1} User"
+  gid ${2:group}
+  home "/home/#{$1}"
+  supports(manage_home: true)
+  shell '/bin/bash'
+end

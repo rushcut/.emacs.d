@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: UIBarButtonItem alloc
+# key: bbi
+# --
+[[UIBarButtonItem alloc] initWithBarButtonSystemItem:${1:$$(yas-choose-value `("UIBarButtonSystemItemDone" "UIBarButtonSystemItemCancel" "UIBarButtonSystemItemEdit" "UIBarButtonSystemItemSave" "UIBarButtonSystemItemAdd" "UIBarButtonSystemItemFlexibleSpace" "UIBarButtonSystemItemFixedSpace" "UIBarButtonSystemItemCompose" "UIBarButtonSystemItemReply" "UIBarButtonSystemItemAction" "UIBarButtonSystemItemOrganize" "UIBarButtonSystemItemBookmarks" "UIBarButtonSystemItemSearch" "UIBarButtonSystemItemRefresh" "UIBarButtonSystemItemStop" "UIBarButtonSystemItemCamera" "UIBarButtonSystemItemTrash" "UIBarButtonSystemItemPlay" "UIBarButtonSystemItemPause" "UIBarButtonSystemItemRewind" "UIBarButtonSystemItemFastForward" "UIBarButtonSystemItemUndo" "UIBarButtonSystemItemRedo" "UIBarButtonSystemItemPageCurl"))} target:self action:@selector(${2:addObject:})]

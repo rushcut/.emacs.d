@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: boostrap
+# key: boostrap
+# --
+@import "compass";
+@import "compass/reset";
+@import "bootstrap";
+@import "font-awesome";

@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name: tableview (datasource)
+# key: tv
+# --
+/////////////////////////////////////////////////////////////////////////////////////
+//
+#pragma mark - UITableView DataSource
+//
+/////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+//
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  ${1:return [[self.fetchedResultsController sections] count]};
+}
+
+//////////////////////////////////////////////////////////////////////
+//
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  ${2:id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];}
+}
+
+//////////////////////////////////////////////////////////////////////
+//
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString* CellIdentifier = @"${3:Cell}";
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.textLabel.text = @"${3:text}";
+    return cell;
+}

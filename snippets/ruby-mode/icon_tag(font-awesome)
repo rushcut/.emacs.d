@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: icon_tag(font-awesome)
+# key: helpers
+# --
+def icon_tag(name, size="fw")
+  content_tag(:i, "", class: "fa fa-#{name} fa-#{size}")
+end

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: icon_tag (bootstrap3)
+# key: icon
+# --
+def icon_tag(name)
+  content_tag(:span, "", class: "glyphicon glyphicon-#{name}")
+end

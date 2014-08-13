@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: faker(sentence)
+# key: faker
+# --
+Faker::Lorem.sentence(${1:count})

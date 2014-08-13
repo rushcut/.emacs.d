@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: attributedString
+# key: vat
+# --
+NSAttributedString* attributed${1:name} = [[NSAttributedString alloc]
+                                            initWithString:${2:string}
+                                       attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Copperplate-Bold" size:23],
+                                                    NSForegroundColorAttributeName:[UIColor whiteColor],
+                                                    NSKernAttributeName: @(-2.0f)}];

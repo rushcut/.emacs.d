@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: initWithFrame
+# key: init
+# --
+[[${1:NSObject} alloc] initWithFrame:CGRectMake($2)];

@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: sectionKey (tabbar)
+# key: sectionkey
+# --
+switch (tabIndex) {
+    case kByName: {
+        NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"secretIdentity" ascending:YES];
+        NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor1, sortDescriptor2, nil];
+        [request setSortDescriptors:sortDescriptors];
+        sectionKey = @"name";
+        break;
+    }
+    case kBySecretIdentity:{
+        NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"secretIdentity" ascending:YES];
+        NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor1, sortDescriptor2, nil];
+        [request setSortDescriptors:sortDescriptors];
+        sectionKey = @"secretIdentity";
+        break;
+    }
+}

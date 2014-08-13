@@ -1,0 +1,87 @@
+# -*- mode: snippet -*-
+# name: FetchedResutsController
+# key: frc
+# --
+/////////////////////////////////////////////////////////////////////////////////////
+//
+#pragma mark - NSFetchedResultsController
+//
+/////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+//
+- (NSFetchedResultsController *)fetchedResultsController {
+    if (fetchedResultsController_ != nil) {
+        return fetchedResultsController_;
+    }
+    NSFetchRequest* request = [[NSFetchRequest alloc] init];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext* managedObjectContext = [appDelegate managedObjectContext];
+    NSEntityDescription* entity = [NSEntityDescription entityForName:${1:entityName} inManagedObjectContext:managedObjectContext];
+    NSArray* sorts = [NSArray arrayWithObjects:[NSSortDescriptor sortDescriptorWithKey:@"Hero" ascending:YES], nil];
+
+    [request setEntity:entity];
+    [request setFetchBatchSize:20];
+    [request setSortDescriptors:sorts];
+
+    NSString *sectionKey = nil;
+    NSFetchedResultsController* frc = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                          managedObjectContext:managedObjectContext
+                                                                            sectionNameKeyPath:sectionKey
+    cacheName:${2:$1}];
+    frc.delegate = self;
+    fetchedResultsController_ = frc;
+
+    NSError* error = nil;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        UIAlertView* alert = [[UIAlertView alloc]
+                               initWithTitle:NSLocalizedString(@"Error saving entity", @"Error saving entity")
+                                     message:[NSString stringWithFormat:NSLocalizedString(@"Error waw: %@, quitting.", @"Error was: %@ quitting"), [error description]]
+                                    delegate:self cancelButtonTitle:NSLocalizedString(@"Aw, Nuts", @"Aw, Nuts") otherButtonTitles: nil];
+        [alert show];
+
+    }
+    return fetchedResultsController_;
+}
+
+
+//////////////////////////////////////////////////////////////////////
+//
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+  [self.${10:tableView}ableView beginUpdates];
+}
+
+//////////////////////////////////////////////////////////////////////
+//
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+  [self.$10 endUpdates];
+}
+
+//////////////////////////////////////////////////////////////////////
+//
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+  switch (type) {
+  case NSFetchedResultsChangeInsert:
+    [self.$10 insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+    break;
+  case NSFetchedResultsChangeDelete:
+    [self.$10 deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+  default:
+    break;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+//
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+     switch (type) {
+        case NSFetchedResultsChangeInsert:
+             [self.$10 insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [self.$10 insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        case NSFetchedResultsChangeUpdate:
+        case NSFetchedResultsChangeMove:
+            break;
+    }
+}

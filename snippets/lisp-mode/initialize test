@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: initialize test
+# key: spec
+# --
+(require 'el-expectations)
+(require 'el-mock)
+(require '${1:project-name})
+
+(expectations
+
+  $0
+
+  )

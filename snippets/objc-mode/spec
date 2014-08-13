@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: spec
+# key: spec
+# --
+#import "Kiwi.h"
+
+SPEC_BEGIN(${1:`(r-ext (buffer-name) "")`})
+
+$0
+
+SPEC_END

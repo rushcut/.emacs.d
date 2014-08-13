@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: spec
+# key: it
+# --
+(desc "${1:description}")
+(expect ${2:expected}
+        $0)

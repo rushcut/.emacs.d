@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: user
+# key: user
+# --
+user = User.create(email: "rushcut@gmail.com", password: "pass1234", password_confirmation: "pass1234")

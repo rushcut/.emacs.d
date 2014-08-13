@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: panel
+# key: bo3
+# --
+.panel.panel-info
+  .panel-heading ${1:title}
+  .panel-body ${2:body}
+  .panel-footer ${3:footer}

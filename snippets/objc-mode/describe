@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: describe
+# key: de
+# --
+describe(@"${1:`(r-ext (buffer-name) "")`}", ^{
+    $0
+});

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: pushViewController
+# key: nav
+# --
+[self.navigationController pushViewController:${1:controller} animated:${2:YES}];

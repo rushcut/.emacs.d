@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: asb
+# key: asb
+# --
+expect($1).toBe($2)

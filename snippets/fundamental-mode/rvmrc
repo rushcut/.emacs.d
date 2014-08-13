@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rvmrc
+# key: rvm
+# --
+rvm use --create ruby-2.1.1@${1:`(car (last (s-split "/" (f-dirname buffer-file-name))))`}

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: has_mongoid_attached_file
+# key: paperclip
+# --
+  has_mongoid_attached_file :${1:attachment}, :styles => { thumb: ["150x150>", :jpg], medium: ["500x500>", :jpg] }
+  validates_attachment_content_type :$1, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]

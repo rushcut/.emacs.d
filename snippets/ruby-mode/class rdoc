@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: class (RDoc)
+# key: rdoc
+# --
+##
+# This class represents an arbitrary shape by a series of points.

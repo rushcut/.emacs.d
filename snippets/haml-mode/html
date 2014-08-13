@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: html
+# key: html
+# --
+!!! 5
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+    %title= content_for?(:title) ? yield(:title) : "${1:app_name}"
+    %meta{:content => content_for?(:description) ? yield(:description) : "$1", :name => "description"}
+    = stylesheet_link_tag :application, :media => "all"
+    = javascript_include_tag :application
+    = csrf_meta_tags
+    = yield(:head)
+  %body
+    .container
+      = yield

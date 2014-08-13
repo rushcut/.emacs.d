@@ -1,0 +1,23 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: bower
+# key: bower
+# --
+{
+    "name": "${1:app_name}",
+    "version": "0.0.1",
+    "authors": [
+    ],
+    "description": "rails",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "vendor/assets/components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        // "marked": "~ 3.0"
+    }
+}

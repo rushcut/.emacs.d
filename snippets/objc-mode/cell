@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cell
+# key: cell
+# --
+cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:${1CellIdentifier}];

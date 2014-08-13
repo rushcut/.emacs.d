@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: timecop (cucumber)
+# key: timecop
+# --
+Before("@timecop") do
+  Timecop.freeze
+end
+After("@timecop") do
+  Timecop.return
+end

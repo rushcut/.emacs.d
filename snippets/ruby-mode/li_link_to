@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: li_link_to
+# key: helpers
+# --
+def li_link_to label, path, options={}
+  active = (request.fullpath == path) ? "active" : ""
+  content_tag :li, link_to(label, path, options), class: active
+end

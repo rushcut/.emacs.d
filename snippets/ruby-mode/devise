@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: devise
+# key: devise
+# --
+config.to_prepare do
+  Devise::SessionsController.layout "your_layout_name"
+  Devise::RegistrationsController.layout "your_layout_name"
+  Devise::ConfirmationsController.layout "your_layout_name"
+  Devise::UnlocksController.layout "your_layout_name"
+  Devise::PasswordsController.layout "your_layout_name"
+end

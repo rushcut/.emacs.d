@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: capistrano with puma
+# key: gem
+# --
+gem 'capistrano-rails'
+gem 'rvm1-capistrano3', require: false
+gem 'capistrano3-puma', github: "seuros/capistrano-puma"
+gem 'capistrano-bower'
+
+group :production do
+  gem 'puma'
+end
