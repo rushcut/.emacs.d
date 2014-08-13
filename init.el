@@ -3,4 +3,7 @@
 (require 'init-utils)
 (require 'init-elpa)
 
+(require-package 'diminish)
+
 (require 'init-preference)
+(require 'init-git)
