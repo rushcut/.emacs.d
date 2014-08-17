@@ -1,7 +1,7 @@
 (require-package 'company)
 (require 'company)
-(require 'company-abbrev)
-(require 'company-dabbrev)
+;; (require 'company-abbrev)
+;; (require 'company-dabbrev)
 
 (setq company-auto-complete nil)
 

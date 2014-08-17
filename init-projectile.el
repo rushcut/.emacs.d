@@ -1,5 +1,8 @@
 (require-package 'projectile)
 (require-package 'ag)
+(require-package 'ack)
+(require-package 'ack-and-a-half)
+
 (custom-set-variables
  '(projectile-enable-caching t)
  '(projectile-keymap-prefix (kbd "M-s p")))

@@ -37,21 +37,21 @@
 
 (defgroup my-config nil "Customizations for init.el" :group 'emacs)
 
-(defcustom my-frame-font "Monospace:pixelsize=21"
-  "Default font"
-  :type 'string
-  :group 'my-config
-  :set (lambda (symbol value)
-         (set-default symbol value)
-         (set-frame-font value)))
+;; (defcustom my-frame-font "Monospace:pixelsize=21"
+;;   "Default font"
+;;   :type 'string
+;;   :group 'my-config
+;;   :set (lambda (symbol value)
+;;          (set-default symbol value)
+;;          (set-frame-font value)))
 
-(defcustom my-frame-font-chinese "Monospace:pixelsize=22"
-  "Chinese font"
-  :type 'string
-  :group 'my-config
-  :set (lambda (symbol value)
-         (set-default symbol value)
-         (set-fontset-font "fontset-default" 'chinese-gbk value)))
+;; (defcustom my-frame-font-chinese "Monospace:pixelsize=22"
+;;   "Chinese font"
+;;   :type 'string
+;;   :group 'my-config
+;;   :set (lambda (symbol value)
+;;          (set-default symbol value)
+;;          (set-fontset-font "fontset-default" 'chinese-gbk value)))
 
 (defcustom my-custom-readonly-file (expand-file-name "custom.readonly.el" user-emacs-directory)
   "Allow override customizations in `custom-file'"

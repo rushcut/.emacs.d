@@ -7,8 +7,8 @@
   (setq-default line-spacing 1)
   (set-fontset-font (frame-parameter nil 'font)
                     '(#x1100 . #xffdc)
-                    '("Apple SD Gothic Neo" . "iso10646-1")))
-
+                    '("Apple SD Gothic Neo" . "iso10646-1"))
+  )
 
 ;; THEME
 (setq custom-theme-directory (expand-file-name "themes" user-emacs-directory))

@@ -3,12 +3,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ag-arguments (quote ("--line-number" "--smart-case" "--nogroup" "--column" "--ignore=backups" "--ignore=.ido.last" "--ignore=elpa/archives" "--")))
  '(auto-save-interval 300)
  '(auto-save-timeout 10)
  '(backup-by-copying t)
  '(backup-directory-alist (list (cons "." (expand-file-name "backups" user-emacs-directory))))
  '(delete-by-moving-to-trash t)
  '(delete-old-versions t)
+ '(eclim-use-yasnippet nil)
+ '(eclimd-wait-for-process nil)
  '(flx-ido-threshhold 8000)
  '(grep-find-ignored-directories (quote ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "tmp" "log" "vendor")))
  '(ido-default-buffer-method (quote selected-window))
@@ -24,8 +27,16 @@
  '(kill-ring-max 500)
  '(projectile-enable-caching t)
  '(projectile-keymap-prefix (kbd "M-s p"))
+ '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
+ '(uniquify-strip-common-suffix nil)
  '(vc-make-backup-files t)
- '(version-control t))
+ '(version-control t)
+ '(yas-choose-keys-first nil)
+ '(yas-trigger-key "M-RET")
+ '(yas-triggers-in-field t)
+ '(yas-use-menu nil)
+ '(yas-wrap-around-region nil)
+ '(yas/indent-line (quote fixed)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

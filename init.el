@@ -4,6 +4,9 @@
 (require 'init-elpa)
 
 (require-package 'diminish)
+(require-package 'f)
+(require 'f)
+(require-package 's)
 
 (require 'init-preference)
 (require 'init-look)
@@ -17,10 +20,18 @@
 
 (require 'init-projectile)
 (require 'init-alternative-files)
-(require 'init-company)
+(require 'init-smartparens)
+
+;; (require 'init-company)
+(require 'init-auto-complete)
+
+
 (require 'init-yasnippet)
 (require 'init-windows)
 (require 'init-files)
 ;; (require 'init-term)
 
 (require 'init-special-buffers)
+
+;; modes
+(require 'init-java-mode)

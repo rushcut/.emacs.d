@@ -9,6 +9,7 @@
 
 
 (require 'my-mode)
+(require 'gil-functions)
 (require 'my-functions)
 (require 'alternative-files)
 
