@@ -35,3 +35,4 @@
 
 ;; modes
 (require 'init-java-mode)
+(require 'init-ruby-mode)
