@@ -31,6 +31,7 @@
 (require 'init-files)
 ;; (require 'init-term)
 
+(require 'init-moz)
 (require 'init-special-buffers)
 
 ;; modes
