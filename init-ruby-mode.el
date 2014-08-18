@@ -60,6 +60,35 @@
 
 (add-hook 'ruby-mode-hook 'init--ruby-mode)
 
+;; feature
+(require-package 'feature-mode)
+
+;; (setq feuature-use-rvm t)
+
+(add-to-list 'auto-mode-alist '("\\.feature\\'" . feature-mode))
+(custom-set-variables
+ '(feature-default-language "ko")
+ '(feature-cucumber-command "rake cucumber CUCUMBER_OPTS=\"{options} -r features\" FEATURE=\"{feature}\"")
+ )
+
+(require-package 'rvm)
+(rvm-use-default)
+
+(global-set-key (kbd "M-s u") 'rvm-activate-corresponding-ruby)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; RSPEC-MODE
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require-package 'rspec-mode)
+;; (add-hook 'haml-mode-hook 'rspec-mode)
+;; (add-hook 'web-mode-hook 'rspec-mode)
+
+;; (modify-syntax-entry ?_ "w" haml-mode-syntax-table)
+
+(setq rspec-use-bundler-when-possible nil)
+(setq rspec-use-rake-when-possible nil)
 
 ;;; rails
 
@@ -67,6 +96,13 @@
 (require-package 'projectile-rails)
 (require 'projectile)
 (require 'projectile-rails)
+
+(defun projectile-rails-root ()
+  "Returns rails root directory if this file is a part of a Rails application else nil"
+  (ignore-errors
+    (let ((root (projectile-project-root)))
+      (when (file-exists-p (expand-file-name "features/support/env.rb" root))
+        root))))
 
 (custom-set-variables
  '(projectile-rails-expand-snippet nil))
@@ -82,5 +118,6 @@
 
 (define-key projectile-rails-command-map (kbd "s") 'projectile-rails-find-steps)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
+
 
 (provide 'init-ruby-mode)
