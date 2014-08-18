@@ -51,6 +51,12 @@
 (setq-default save-place t)
 (setq save-place-file (expand-file-name ".places" user-emacs-directory))
 
+(custom-set-variables
+ '(current-language-environment "UTF-8")
+ '(locale-coding-system 'utf-8)
+ '(ruby-insert-encoding-magic-comment nil)
+)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; Auto Revert

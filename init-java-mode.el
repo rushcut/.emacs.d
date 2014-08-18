@@ -54,18 +54,6 @@
 ;; (popwin:display-buffer-1 "*eclim: problems*")
 ;; (require 'company)
 
-;; (add-hook 'eclim-mode-hook 'company-mode)
-
-;; (fill-keymap eclim-mode-map
-;;              "C-c C-e C-d" 'eclim-java-show-documentation-for-current-element
-;;              "C-c d" 'eclim-java-show-documentation-for-current-elementeva
-;;              "C-c t" 'eclim-java-find-type
-;;              "C-c f" 'eclim-java-find-generic
-;;              "C-c r" 'eclim-java-find-references
-;;              "C-c ," 'eclim-run-test
-;;              "C-c c" 'eclim-problems-correct
-;;              "C-c s" 'eclim-goto-super)
-
 (defun eclim-goto-super ()
   "Jump to superclass."
   (interactive)
@@ -217,41 +205,41 @@ then it'll call “java x” in a shell."
 ;;       (eclim-java-correct (cdr (assoc 'line p)) (eclim--byte-offset))
 ;;       (message (buffer-name)))))
 
-(defun eclim-java-correct (line offset)
-  "Must be called with the problematic file opened in the current buffer."
-  (message "Getting corrections...")
-  (eclim/with-results correction-info ("java_correct" "-p" "-f" ("-l" line) ("-o" offset))
-    (let ((window-config (current-window-configuration))
-          (corrections (cdr (assoc 'corrections correction-info)))
-          (project (eclim--project-name))) ;; store project name before buffer change
-      (pop-to-buffer "*corrections*")
-      (erase-buffer)
-      (use-local-map eclim-java-correct-map)
+;; (defun eclim-java-correct (line offset)
+;;   "Must be called with the problematic file opened in the current buffer."
+;;   (message "Getting corrections...")
+;;   (eclim/with-results correction-info ("java_correct" "-p" "-f" ("-l" line) ("-o" offset))
+;;     (let ((window-config (current-window-configuration))
+;;           (corrections (cdr (assoc 'corrections correction-info)))
+;;           (project (eclim--project-name))) ;; store project name before buffer change
+;;       (pop-to-buffer "*corrections*")
+;;       (erase-buffer)
+;;       (use-local-map eclim-java-correct-map)
 
-      (insert "Problem: " (cdr (assoc 'message correction-info)) "\n\n")
-      (if (eq (length corrections) 0)
-          (insert "No automatic corrections found. Sorry.")
-        (insert (substitute-command-keys
-                 (concat
-                  "Choose a correction by pressing \\[eclim-java-correct-choose]"
-                  " on it or typing its index. Press \\[eclim-java-correct-quit] to quit"))))
-      (insert "\n\n")
+;;       (insert "Problem: " (cdr (assoc 'message correction-info)) "\n\n")
+;;       (if (eq (length corrections) 0)
+;;           (insert "No automatic corrections found. Sorry.")
+;;         (insert (substitute-command-keys
+;;                  (concat
+;;                   "Choose a correction by pressing \\[eclim-java-correct-choose]"
+;;                   " on it or typing its index. Press \\[eclim-java-correct-quit] to quit"))))
+;;       (insert "\n\n")
 
-      (dotimes (i (length corrections))
-        (let ((correction (aref corrections i)))
-          (insert "------------------------------------------------------------\n"
-                  "Correction "
-                  (int-to-string (cdr (assoc 'index correction)))
-                  ": " (cdr (assoc 'description correction)) "\n\n"
-                  "Preview:\n\n"
-                  (cdr (assoc 'preview correction))
-                  "\n\n")))
-      (goto-char (point-min))
-      (setq eclim-corrections-previous-window-config window-config)
-      (make-local-variable 'eclim-correction-command-info)
-      (setq eclim-correction-command-info (list 'project project
-                                                'line line
-                                                'offset offset)))))
+;;       (dotimes (i (length corrections))
+;;         (let ((correction (aref corrections i)))
+;;           (insert "------------------------------------------------------------\n"
+;;                   "Correction "
+;;                   (int-to-string (cdr (assoc 'index correction)))
+;;                   ": " (cdr (assoc 'description correction)) "\n\n"
+;;                   "Preview:\n\n"
+;;                   (cdr (assoc 'preview correction))
+;;                   "\n\n")))
+;;       (goto-char (point-min))
+;;       (setq eclim-corrections-previous-window-config window-config)
+;;       (make-local-variable 'eclim-correction-command-info)
+;;       (setq eclim-correction-command-info (list 'project project
+;;                                                 'line line
+;;                                                 'offset offset)))))
 (defun jump-to-reverse-file ()
   (interactive)
   (let ((target "foo"))
@@ -282,6 +270,11 @@ then it'll call “java x” in a shell."
   )
 )
 
+(defun eclim-java-format ()
+  (interactive)
+  )
+
+
 
 (define-key eclim-mode-map (kbd "C-c j .") 'eclim-java-find-declaration)
 (define-key eclim-mode-map (kbd "C-c j r") 'jump-to-reverse-file)
@@ -289,6 +282,8 @@ then it'll call “java x” in a shell."
 (define-key eclim-mode-map (kbd "C-c j 9") 'start-eclimd)
 (define-key eclim-mode-map (kbd "C-c , v") 'project-java-run-test)
 (define-key eclim-mode-map (kbd "C-c , r") 'project-java-run)
+(define-key eclim-mode-map (kbd "C-c j g") 'eclim-java-find-declaration)
+(define-key eclim-mode-map (kbd "C-c C-c") 'eclim-java-find-declaration)
 
 (define-key eclim-mode-map (kbd "C-c j e") 'eclim-run-class)
 (define-key eclim-mode-map (kbd "C-c j q") 'eclim-java-format)
@@ -326,7 +321,7 @@ then it'll call “java x” in a shell."
             ))
 
 (add-hook 'after-save 'eclim-problems-buffer-refresh)
-(add-hook 'before-save 'eclim-java-format)
+;; (add-hook 'before-save 'eclim-java-format)
 
 
 ;; (require-package 'emacs-eclim)

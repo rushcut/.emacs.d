@@ -24,11 +24,14 @@
 
 ;; (require 'init-company)
 (require 'init-auto-complete)
+(require 'init-hippie)
+(require 'init-debug)
 
 
 (require 'init-yasnippet)
 (require 'init-windows)
 (require 'init-files)
+(require 'init-quickrun)
 ;; (require 'init-term)
 
 (require 'init-moz)

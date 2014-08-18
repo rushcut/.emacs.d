@@ -1,5 +1,6 @@
 (require-package 'smartparens)
 (require 'smartparens)
+(require 'smartparens-ruby)
 
 (setq sp-autoskip-closing-pair 'always
       sp-show-pair-delay 0

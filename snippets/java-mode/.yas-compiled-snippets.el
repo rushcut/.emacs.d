@@ -4,7 +4,8 @@
 (yas-define-snippets 'java-mode
                      '(("pp" "System.out.println(\"==========================\");\nSystem.out.println($1);" "System.out.println" nil nil nil nil nil nil)
                        ("cla" "`(java-support-package-line-string)`public class `(replace-regexp-in-string \".java\" \"\" (file-name-base))` {\n\n      public `(replace-regexp-in-string \".java\" \"\" (file-name-base))`() {\n             $0\n      }\n}" "class" nil nil nil nil nil nil)
-                       ("hamcrest" "import org.hamcrest.*;\nimport static org.hamcrest.MatcherAssert.assertThat;\nimport static org.hamcrest.Matchers.*;\n" "import hamcrest" nil nil nil nil nil nil)
+                       ("hamcrest" "import static org.hamcrest.MatcherAssert.assertThat;\nimport static org.hamcrest.core.Is.is;\nimport static org.hamcrest.core.IsNull.notNullValue;" "hamcrest" nil nil nil nil nil nil)
+                       ("hamcrest" "import org.hamcrest.*;\nimport static org.hamcrest.MatcherAssert.assertThat;\nimport static org.hamcrest.Matchers.equalTo;\n\n" "import hamcrest" nil nil nil nil nil nil)
                        ("psf" "private static final ${1:String} ${2:NAME};" "private static final" nil nil nil nil nil nil)
                        ("pm" "public ${1:void} ${2:method_name}($3) {\n       $0\n}" "public method" nil nil nil nil nil nil)
                        ("pusf" "public static final ${1:String} ${2:NAME};" "public static final" nil nil nil nil nil nil)
@@ -13,4 +14,4 @@
                        ("try" "try {\n	$0\n} catch (${1:Exception} e) {\n	e.printStackTrace();\n}" "try-catch" nil nil nil nil nil nil)))
 
 
-;;; Do not edit! File generated at Sun Aug 17 12:42:03 2014
+;;; Do not edit! File generated at Mon Aug 18 20:11:30 2014

@@ -40,4 +40,4 @@
                        ("vin" "${1:NSObject}* ${1:$(s-lower-camel-case (replace-regexp-in-string \"^[A-Z][A-Z]\" \"\" yas-text))} = [[$1 alloc] init$0];\n" "assign with alloc init" nil nil nil nil nil nil)))
 
 
-;;; Do not edit! File generated at Sun Aug 17 12:42:03 2014
+;;; Do not edit! File generated at Mon Aug 18 20:11:30 2014

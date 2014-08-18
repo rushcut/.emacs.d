@@ -6,4 +6,4 @@
                        ("locale" "errors:\n  # default format: \"%{attribute} %{message}\"\n  format: \"%{message}\"\n\nmongoid:\n  attributes:\n    article:\n      title: \"Article title\"\n\n  errors:\n    models:\n      article:\n        attributes:\n          title:\n            blank: \"Article title can't be blank.\"\n          document_id:\n            blank: \"You must associate the article with a parent document.\"\n          description_1:\n            blank: \"First description text area can't be blank.\"\n          code_1:\n            blank: \"First code text area can't be blank.\"\n\n      document:\n        attributes:\n          title:\n            blank: \"Document title can't be blank.\"\n" "locale(mongoid)" nil nil nil nil nil nil)))
 
 
-;;; Do not edit! File generated at Sun Aug 17 12:42:03 2014
+;;; Do not edit! File generated at Mon Aug 18 20:11:30 2014
