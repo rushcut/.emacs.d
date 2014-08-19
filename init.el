@@ -38,8 +38,9 @@
 (require 'init-special-buffers)
 
 ;; modes
-(require 'init-java-mode)
+;; (require 'init-java-mode)
 (require 'init-ruby-mode)
+(require 'init-yaml-mode)
 
 
 ;; alias
