@@ -27,11 +27,11 @@
 (require 'init-hippie)
 (require 'init-debug)
 
-
 (require 'init-yasnippet)
 (require 'init-windows)
 (require 'init-files)
 (require 'init-quickrun)
+(require 'init-anzu)
 ;; (require 'init-term)
 
 (require 'init-moz)
@@ -40,3 +40,7 @@
 ;; modes
 (require 'init-java-mode)
 (require 'init-ruby-mode)
+
+
+;; alias
+(require 'init-alias)
