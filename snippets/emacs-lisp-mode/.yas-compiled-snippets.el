@@ -17,4 +17,4 @@
                        ("test" "(ert-deftest ${1:method}-test ()\n             $0)" "test" nil nil nil nil nil nil)))
 
 
-;;; Do not edit! File generated at Mon Aug 18 20:11:30 2014
+;;; Do not edit! File generated at Thu Aug 21 01:52:44 2014
