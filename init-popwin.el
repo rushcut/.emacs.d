@@ -11,7 +11,7 @@
 
 (setq display-buffer-function 'popwin:display-buffer)
 
-(push '("*compilation*" :width 120 :position right :stick t) popwin:special-display-config)
+(push '("*compilation*" :width 120 :position right :stick t :noselect t) popwin:special-display-config)
 (push '("*auto-async-byte-compile*" :height 14 :position bottom :noselect t) popwin:special-display-config)
 (push '(" *auto-async-byte-compile*" :height 14 :position bottom :noselect t) popwin:special-display-config)
 (push '("  *auto-async-byte-compile*" :height 14 :position bottom :noselect t) popwin:special-display-config)
