@@ -6,7 +6,7 @@
   (message "building project tags")
   (let ((root (project-root)))
     (shell-command (concat "ctags -e -R --extra=+fq --exclude=db --exclude=test --exclude=.git --exclude=public -f " root "TAGS " root)))
-  (visit-project-tags)
+  (ruby-visit-project-tags)
   (message "tags built successfully"))
 
 (defun ruby-visit-project-tags ()

@@ -36,10 +36,12 @@
 
 (require 'init-moz)
 (require 'init-special-buffers)
+(require 'init-mmm)
 
 ;; modes
 ;; (require 'init-java-mode)
 (require 'init-ruby-mode)
+(require 'init-coffee-mode)
 (require 'init-yaml-mode)
 
 
