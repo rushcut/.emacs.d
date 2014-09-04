@@ -38,8 +38,8 @@
   :group 'files)
 
 (defconst alternative-files-functions
-  '(alternative-files-rails-finder
-    alternative-files-rspec-finder
+  '(alternative-files-rspec-finder
+    ;; alternative-files-rails-finder
     alternative-files-objc-finder
     alternative-files-user-rules-finder)
   "Functions used to find alternative-files.")
@@ -127,10 +127,12 @@ Use `pluralize-string' in `inflections.el' or just append trailing s."
           (when (string-match "^\\(.*\\)_controller$" name)
             (setq name (match-string 1 name))
             (list
+             (concat root "/spec/controllers/" name "_spec.rb")
              (concat root "/app/models/" dir (alternative-files--singularize-string name) ".rb")
              (concat root "/app/models/" dir name ".rb")
              (concat root "/app/helpers/" dir name "_helper.rb")
-             (concat root "/app/views/" dir name "/"))))
+             (concat root "/app/views/" dir name "/")
+             )))
 
          ((string-equal type "helpers")
           (when (string-match "^\\(.*\\)_helper$" name)
@@ -168,6 +170,12 @@ Use `pluralize-string' in `inflections.el' or just append trailing s."
         (list
          (concat root "/lib/" name ".rb"))))
 
+     ((string-match "^\\(.*\\)/spec/seeds/\\(.+\\)_spec.rb$" file)
+      (let ((root (match-string 1 file))
+            (name (match-string 2 file)))
+        (list
+         (concat root "/db/seeds/" name ".rb"))))
+
      ((string-match "^\\(.*\\)/spec/\\(models\\|controllers\\|helpers\\)/\\(.+\\)_spec.rb$" file)
       (let ((root (match-string 1 file))
             (type (match-string 2 file))
@@ -187,7 +195,16 @@ Use `pluralize-string' in `inflections.el' or just append trailing s."
             (name (match-string 2 file)))
         (list
          (concat root "/spec/lib/" name "_spec.rb")
-         (concat root "/spec/" name "_spec.rb"))))
+         (concat root "/spec/" name "_spec.rb")))
+      )
+
+     ((string-match "^\\(.*\\)/db/seeds/\\(.+\\)\\.rb$" file)
+      (let ((root (match-string 1 file))
+            (name (match-string 2 file)))
+        (list
+         (concat root "/spec/seeds/" name "_spec.rb")
+         (concat root "/spec/" name "_spec.rb")))
+      )
 
      )))
 

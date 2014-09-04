@@ -85,12 +85,6 @@
  )
 (setq feature-default-i18n-file "~/.emacs.d/etc/cucumber_i18n.yml")
 
-(defun feature-minor-modes ()
-  "Enable/disable all minor modes for feature mode."
-  (when (fboundp 'electric-indent-mode)
-    (electric-indent-mode -1)))
-
-
 (require-package 'rvm)
 (rvm-use-default)
 
@@ -135,7 +129,7 @@
 
 (defun projectile-rails-find-config ()
   (interactive)
-  (projectile-rails-find-resource "steps: " '(("config/" "config/\\(.+\\)\\.rb$"))))
+  (projectile-rails-find-resource "config: " '(("config/" "config/\\(.+\\)\\.rb$"))))
 
 (defun projectile-rails-find-features-support ()
   (interactive)

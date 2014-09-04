@@ -30,4 +30,14 @@
 (add-to-list 'auto-mode-alist '("\\.rhtml\\'" . html-erb-mode))
 (add-to-list 'auto-mode-alist '("\\.jst\\.ejs\\'"  . html-erb-mode))
 
+(mmm-add-group
+ 'org-emacs-lisp
+ '((emacs-lisp
+    :submode emacs-lisp-mode
+    :face mmm-code-submode-face
+    :front "^#\\+BEGIN_SRC emacs-lisp[ \t]*\n?"
+    :back "^#\\+END_SRC")
+  ))
+(mmm-add-mode-ext-class 'org-mode nil 'org-emacs-lisp)
+
 (provide 'init-mmm)

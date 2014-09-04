@@ -13,3 +13,6 @@
 /site-lisp/feature-mode/snippets/
 /site-lisp/feature-mode/CONTRIBUTORS
 /TAGS
+*.elc
+/etc/
+/tramp

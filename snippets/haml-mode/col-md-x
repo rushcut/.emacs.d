@@ -1,0 +1,4 @@
+# key: md
+# name: col-md-x
+# --
+`(delete-char (- (skip-chars-backward " ")))`.col-md-${1:12}

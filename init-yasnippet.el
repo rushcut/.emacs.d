@@ -1,6 +1,6 @@
 (require-package 'yasnippet)
-(require-package 'popup)
-(require 'popup nil t)
+;; (require-package 'popup)
+;; (require 'popup nil t)
 (when (featurep 'popup)
   (define-key popup-menu-keymap (kbd "M-n") 'popup-next)
   (define-key popup-menu-keymap (kbd "TAB") 'popup-next)
@@ -8,15 +8,11 @@
   (define-key popup-menu-keymap (kbd "<backtab>") 'popup-previous)
   (define-key popup-menu-keymap (kbd "M-p") 'popup-previous))
 
+
+
 (custom-set-variables
  '(yas-trigger-key "M-RET")
- ;; Add yas-expand itself, so when auto-complete completes and retry, yas-expand can work.
- ;; '(yas-expand-only-for-last-commands '(self-insert-command org-self-insert-command yas-expand ac-next ac-previous ac-expand))
  '(yas-choose-keys-first nil)
- ;; '(yas-prompt-functions (quote (yas-popup-isearch-prompt
- ;;                                yas-ido-prompt
- ;;                                yas-x-prompt
- ;;                                yas-no-prompt)))
  '(yas-wrap-around-region nil)
  '(yas-use-menu nil)
  '(yas-triggers-in-field t)
@@ -25,13 +21,10 @@
 
 (add-hook 'yas-minor-mode-hook
           (lambda ()
-            (define-key yas-minor-mode-map (kbd "TAB") nil)
-            (define-key yas-minor-mode-map [(tab)] nil)))
+            (define-key yas-minor-mode-map (kbd "TAB") nil)))
 
 (global-unset-key (kbd "M-RET"))
 (define-key global-map (kbd "M-RET") 'yas-expand)
-
-(yas-global-mode t)
 
 (global-set-key (kbd "C-c y n") `yas-new-snippet)
 (global-set-key (kbd "C-c y v") `yas-visit-snippet-file)
@@ -95,16 +88,8 @@
 (defadvice yas--menu-keymap-get-create (around ignore (mode &optional parents) activate)
   (setq ad-return-value (make-sparse-keymap)))
 
-(define-key my-keymap (kbd "<tab>") 'yas-insert-snippet)
-
 (let ((map (make-sparse-keymap)))
-  ;; (define-key map (kbd "M-/") 'yas-ido-insert-snippets)
-  ;; (define-key map (kbd "/") 'yas-ido-insert-snippets)
-  ;; (define-key map (kbd "n") 'yas-new-snippet)
-  ;; (define-key map (kbd "o") 'yas-visit-snippet-file)
-  ;; (define-key map (kbd "i") 'auto-insert)
   (define-key map (kbd "RET") 'zencoding-expand-yas)
-  ;; (define-key my-keymap (kbd "M-/") map)
   )
 
 (setq yas-snippet-dirs (list (expand-file-name "snippets" user-emacs-directory)))

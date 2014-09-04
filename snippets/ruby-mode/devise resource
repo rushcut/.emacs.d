@@ -1,6 +1,5 @@
-# -*- mode: snippet; require-final-newline: nil -*-
+# key: devise
 # name: devise resource
-# key: resource
 # --
 def resource_name
   :user

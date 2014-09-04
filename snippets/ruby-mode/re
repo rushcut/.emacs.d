@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: receive
+# key: re
+# --
+${1:expect}(${2:target}).to receive(:${3:method})${4: { ${5:returns} }}

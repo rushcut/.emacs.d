@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: emacs-module
+# key: mod
+# --
+** ${1:module-name}
+#+BEGIN_SRC $1
+(define-module $1
+$0
+)
+#+END_SRC

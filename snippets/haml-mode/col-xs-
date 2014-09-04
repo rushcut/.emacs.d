@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: col-xs-
-# key: co
+# name: col-xs-x
+# key: xs
 # --
 `(delete-char (- (skip-chars-backward " ")))`.col-xs-$0

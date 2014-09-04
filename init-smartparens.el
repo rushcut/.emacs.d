@@ -24,4 +24,10 @@
 (if (eq this-command 'eval-expression)
 (smartparens-mode 1)))
 
+
+(sp-with-modes '(feature-mode)
+  (sp-local-pair "\"" nil :actions nil)
+  (sp-local-pair "\`" nil :actions nil)
+  )
+
 (provide 'init-smartparens)

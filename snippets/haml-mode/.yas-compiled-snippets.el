@@ -4,7 +4,8 @@
 (yas-define-snippets 'haml-mode
                      '((";" "%" ";" nil nil nil nil nil nil)
                        ("checkbox" ".form-group\n  - @games.each do |game|\n    %label\n      = check_box_tag \"quest[game_ids][]\", game.id\n      = game.name" "checkbox" nil nil nil nil nil nil)
-                       ("co" "`(delete-char (- (skip-chars-backward \" \")))`.col-xs-$0\n" "col-xs-" nil nil nil nil nil nil)
+                       ("md" "`(delete-char (- (skip-chars-backward \" \")))`.col-md-${1:12}" "col-md-x" nil nil nil nil nil nil)
+                       ("xs" "`(delete-char (- (skip-chars-backward \" \")))`.col-xs-$0\n" "col-xs-x" nil nil nil nil nil nil)
                        ("co" "`(delete-char (- (skip-chars-backward \" \")))`.col-xs-offset-$0\n" "col-xs-offset-" nil nil nil nil nil nil)
                        ("nav" "%li= link_to \"Action\", \"#\"\n%li.dropdown\n  %a.dropdown-toggle{\"href\" => \"#\", \"data-toggle\" => \"dropdown\"}\n    %span.glyphicon.glyphicon-cog\n  %ul.dropdown-menu\n    %li= link_to \"Action\", \"#\"" "dropdown item" nil nil nil nil nil nil)
                        ("each" "- ${1:elements}.each do |${1:$(ruby-singularize-last-string yas-text)}|\n  $0" "each do" nil nil nil nil "direct-keybinding" nil)
@@ -20,4 +21,4 @@
                        ("su" ".form-group.button-group\n  = f.submit \"${1:저장}\", class: \"btn btn-default\"" "submit(bootstrap 3)" nil nil nil nil nil nil)))
 
 
-;;; Do not edit! File generated at Thu Aug 21 01:52:44 2014
+;;; Do not edit! File generated at Thu Sep  4 12:59:22 2014

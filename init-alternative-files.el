@@ -18,7 +18,9 @@
          (concat root "/spec/controllers/" name "_controller.rb")
          (concat root "/app/helpers/" name "_helper.rb")
          (concat root "/spec/helpers/" name "_helper.rb")
-         (concat root "/app/views/" name "/")))))))
+         (concat root "/db/seeds/" name "_spec.rb")
+         (concat root "/app/views/" name "/"))))))
+  )
 
 (defun alternative-files-go-finder (&optional file)
   (let ((file (or file (alternative-files--detect-file-name))))

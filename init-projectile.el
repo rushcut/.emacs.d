@@ -72,4 +72,6 @@
 (define-key projectile-mode-map (kbd "M-s p !") 'projectile+-shell-command)
 (define-key projectile-mode-map (kbd "M-s p s") 'projectile+-open-session)
 
+(global-set-key (kbd "C-c C-f") 'projectile-find-file)
+
 (provide 'init-projectile)

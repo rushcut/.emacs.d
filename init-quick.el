@@ -1,0 +1,28 @@
+(add-to-list 'load-path "~/.emacs.d")
+
+(require 'init-site-lisp)
+(require 'init-benchmark)
+
+(require 'init-utils)
+(require 'init-elpa)
+(require-package 'diminish)
+
+(require 'init-preference)
+(require 'init-look)
+(require 'init-ido)
+(require 'init-editing)
+(require 'init-popwin)
+(require 'init-auto-complete)
+(require 'init-hippie)
+(require 'init-files)
+(require 'init-anzu)
+(require 'init-yasnippet)
+(require 'init-projectile)
+(require 'init-git)
+(require 'init-windows)
+(require 'init-mmm)
+(require 'init-smartparens)
+(require 'init-alias)
+(require 'init-guide-key)
+
+(benchmark-init/show-durations-tree)
