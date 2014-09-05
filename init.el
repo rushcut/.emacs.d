@@ -24,6 +24,7 @@
 (require 'init-smartparens)
 (require 'init-alias)
 (require 'init-guide-key)
+(require 'init-json)
 
 ;; (require-package 'f)
 ;; (require 'f)

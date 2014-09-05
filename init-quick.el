@@ -24,5 +24,6 @@
 (require 'init-smartparens)
 (require 'init-alias)
 (require 'init-guide-key)
+(require 'init-json)
 
 (benchmark-init/show-durations-tree)

@@ -3,7 +3,7 @@
 (setq mac-allow-anti-aliasing t)
 
 (when *is-cocoa-emacs*
-  (set-face-attribute 'default nil :family "Menlo" :height 140)
+  (set-face-attribute 'default nil :family "Menlo" :height 150)
   (setq-default line-spacing 1)
   (set-fontset-font (frame-parameter nil 'font)
                     '(#x1100 . #xffdc)

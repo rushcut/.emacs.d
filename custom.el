@@ -53,9 +53,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ensime-errline-highlight ((t (:inherit flymake-errline :underline "red"))) t)
- '(font-lock-comment-face ((t (:foreground "aquamarine4"))))
- '(font-lock-string-face ((t (:foreground "#099"))))
  '(mmm-code-submode-face ((t (:background "#444"))))
- '(mode-line ((t (:background "#2D6B61" :foreground "black"))))
- '(powerline-active1 ((t (:background "#49525A"))) t)
- '(powerline-active2 ((t (:background "#6A9F2F" :foreground "#004E00"))) t))
+ '(show-paren-match ((t (:background "#FF4e00" :weight bold))))
+ '(sp-show-pair-match-face ((t (:background "#001100" :weight bold)))))

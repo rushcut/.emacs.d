@@ -123,4 +123,9 @@ A place is considered `tab-width' character columns."
     (barf-if-buffer-read-only)
     ad-do-it))
 
+;;----------------------------------------------------------------------------
+;; Mac Shared Clipboard
+;;----------------------------------------------------------------------------
+(if *is-a-mac* (require 'pbcopy))
+
 (provide 'init-editing)
