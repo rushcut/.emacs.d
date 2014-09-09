@@ -25,5 +25,6 @@
 (require 'init-alias)
 (require 'init-guide-key)
 (require 'init-json)
+(require 'init-nginx-mode)
 
 (benchmark-init/show-durations-tree)

@@ -25,6 +25,7 @@
 (require 'init-alias)
 (require 'init-guide-key)
 (require 'init-json)
+(require 'init-nginx-mode)
 
 ;; (require-package 'f)
 ;; (require 'f)
